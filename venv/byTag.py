@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 from matplotlib import pyplot as plt
 
 objectiveIDs = []
@@ -17,9 +16,6 @@ print(objectiveIDs)
 
 average = len(objectiveIDs)
 print (average)
-
-dropped = data.drop_duplicates("IDПользователя")
-print(dropped)
 
 #print (data)
 #print (klusters)
