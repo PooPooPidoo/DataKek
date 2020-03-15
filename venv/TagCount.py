@@ -30,6 +30,7 @@ data = pd.read_csv("Data.csv")
 #print(tags)
 #fileOut(tags)
 
+objectives = []
 aim = ['э','л','е','к','т']
 cutData = data.drop(data[data["Бренд"] != "oral-b"].index)
 for string in dataList:
@@ -37,8 +38,7 @@ for string in dataList:
     matches = 0
     for word in enumerate(list(words)):
         if (word[1][0:4:] == aim[0:4:]):
-            cutData.drop(columns="Бренд").iloc[word[0]]["IDПользователя"]
-
+            objectives.append(cutData.drop(columns="IDПользователя").iloc[word[0]]["IDПользователя"])
 
 
 cutData = data.drop(data[data["Бренд"] != "oral-b"].index)
